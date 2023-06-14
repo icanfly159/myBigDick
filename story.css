@@ -11,22 +11,25 @@ body {
           z-index: -1;
   }
 
-      .center-box {
+  .center-box {
     position: absolute;
     top: 50%;
     left :50%;
     transform: translate(-50%, -50%);
-
-          background-color: rgb(13, 12, 19);
-          height: 850px;
-          width: 500px;
-          border-radius: 10px;
-          text-align: center;
-          padding-top: 70px;
+    
+    background-color: rgb(13, 12, 19);
+    height: 100%;
+    width: 100%;
+    max-height: 80vh;
+    max-width: 30vw;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 7vh;
     color : white;
     border: 2px solid white;
     box-sizing: border-box;
     opacity: 0.8;
+    
       }
   
     h1{
