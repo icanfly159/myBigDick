@@ -11,48 +11,52 @@ body {
           z-index: -1;
   }
 
-      .center-box {
+    .center-box {
     position: absolute;
-    top: 300%;
+    
+    top: 230%;
     left :50%;
     transform: translate(-50%, -50%);
+    
 
+    
     background-color: rgb(13, 12, 19);
-    height: 4200px;
-    width: 1200px;
-    border-radius: 10px;
+    height: 430vh; 
+    width: 80vw;
+    border-radius: 50px;
     text-align: center;
-    padding-top: 70px;
+    padding-top: 50px;
     color : white;
     border: 2px solid white;
     box-sizing: border-box;
     opacity: 0.9;
     }
+
   
     h1{
-       font-size:  80px;
-       margin-top: 20px;
+      font-size: 6vw;
+      margin-top: 1vh;
        position: absolute;
        top: -40px;
        left: 30px;        
     }
     h2{
-      font-size:  80px;
-      margin-top: 20px;
+      font-size: 6vw;
+      margin-top: 1vh;
       position: absolute;
       top: 1350px;
       left: 30px;        
    }
    h3{
-    font-size:  80px;
-    margin-top: 20px;
+    font-size: 6vw;
+  margin-top: 1vh;
     position: absolute;
     top: 2040px;
     left: 30px;        
  }
  h4{
-  font-size:  80px;
-  margin-top: 20px;
+  font-size: 6vw;
+  margin-top: 1vh;
   position: absolute;
   top: 3070px;
   left: 30px;        
@@ -75,14 +79,21 @@ body {
       border: .5px solid rgb(230, 216, 219);
       border-radius: 20px;
       color: #fff;
-      padding: 20px;
+      padding: vw;
       cursor: pointer;
-      font-size: 30px;
+      font-size: 3vw;
       box-shadow: 0 0 10px 0 rgb(161, 159, 159),
                   0 0 10px 0 rgb(217, 192, 197),
                   0 0 10px 0 rgb(230, 202, 208) inset;
       position: absolute;
-      top: 4000px;
-      right: 10px;
+      bottom: 2vh;
+      right: 2vw;
                   
     }
+   /* 當瀏覽器解析度的寬度變成1500px時 .center-box的長度增加 */
+  @media(max-width:1500px){
+    .center-box{
+      height:auto;/*取代 斷點900px以上設定的 350px高度，不然下方的最小高度500px會無效*/
+      min-height:650vh;    
+    }
+  }

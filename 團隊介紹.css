@@ -1,15 +1,15 @@
 body {
-    margin: 0;
-    padding: 0;
-      }
-  img{
-    position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-  }
+  margin: 0;
+  padding: 0;
+    }
+img{
+  position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+}
 
       .center-box {
     position: absolute;
@@ -72,7 +72,7 @@ body {
       right: 10px;          
     }
     .button2{
-      background-color: #e81515;
+      background-color: #8a0000;
       border: .5px solid rgb(230, 216, 219);
       border-radius: 20px;
       color: #fff;
