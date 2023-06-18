@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width , initial-scale = 1.0">
     <title>my first website</title>
-    
+    <link rel ="stylesheet" type= "text/css" href = "團隊介紹.css" >
     <script>
       function goToLink(url) {
           window.location.href = url;
       }
-      let popup = document.getElementById("popup");
-
-      function openPopup(){
-        popup.classList.add("open-popup");
-      }
-      function closePopup(){
-        popup.classList.remove("open-popup");
-      }
-      </script>
-    <link rel ="stylesheet" type= "text/css" href = "團隊介紹.css" >
-   
+    </script>
+    
   </head>
   <body> 
     <img src="https://truth.bahamut.com.tw/s01/201809/66f1a53336184863b738f176d16ad975.JPG" alt="My Image">
@@ -32,9 +24,19 @@
       <div class = "popup" id ="popup">
         <h2 style="font-size: 5vh;">謝謝你的反饋</h2>
         <p style="font-size: 4vh;">你成功反饋傻逼!!!!</p>
-        <button class="button3" onclick=" closePopup()">nigga!!!</button>
+        <button type ="submit" class= "button3" onclick=" closePopup()">nigga!!!</button>
       </div>
         <button class="button1"   onclick = "goToLink('file:./DOCTYPE.html')">返回 </button>
     </div>
+    <script>
+      let popup = document.getElementById("popup");
+
+      function openPopup(){
+        popup.classList.add("open-popup");
+      }
+      function closePopup(){
+        popup.classList.remove("open-popup");
+      }
+    </script>
   </body>
 </html>

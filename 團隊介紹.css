@@ -32,15 +32,15 @@ img{
   
     }
   
-    h1{
-      font-size: 8vw;
-      margin-top: 2vh;
-      position: absolute;
-      top: 2.5vh;
-      left: 6vw;      
-    }
+  h1{
+    font-size: 8vw;
+    margin-top: 2vh;
+    position: absolute;
+    top: 2.5vh;
+    left: 6vw;      
+  }
   /* 這裡開始是圖片 */
-  .image1 {
+  .image1 { 
   max-width: 15%;
   height: auto;   
   
@@ -106,13 +106,14 @@ img{
       position: absolute;
       top:0;
       left: 50%;
-      transform: translate(-50%,-50%)scale(0.1);/* 讓他有動畫的感覺 */
+      transform: translate(-50%,-50%)scale(0.1);/* 讓他有彈出動畫的感覺 */
       text-align: center;
       padding: 0 2vw 2vw;
       color: #333;
       opacity: 1.5;
-      visibility: hidden; /* 這裡原本預設為會是隱藏當點擊提交才會跳出來 */
-      transition: transform 0.4s, top 0.4s;
+      visibility: hidden; 
+      /* 這裡原本預設為會是隱藏當點擊提交才會跳出來 */
+      transition: transform 0.4s, top 0.4;
     }
     .open-popup{
       visibility: visible;
