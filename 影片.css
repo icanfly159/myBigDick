@@ -1,150 +1,187 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&family=Roboto:wght@400&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+  background-color: #536bc1;
+  padding: 50px 30px;
+  text-align: center;
+  color: #fff;
+  font: normal normal 24px / 1.25 "Raleway", Helvetica, Arial, Verdana, sans-serif;
 }
 
-body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'dosis';
-    color: #080808;
-    background: linear-gradient(110deg, #fc6a6a 0%, #ffc69d 100%);
+body p {
+  max-width: 60ch;
+  margin: 0 auto 2em;
+
 }
 
-.container{
-    position: relative;
-    width: 800px;
-    min-width: 350px;
-    min-height: 250px;
-    padding-bottom: 40px;
-    overflow: hidden;
+img{
+  position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
 }
 
-.wrapper{
-    width: 300%;
-    /* 300% 'caz we have 3 cards */
-    min-height: 100%;
-    display: flex;
-    justify-content: space-between;
-    transition: 1s;
-}
+.center-box {
+  position: absolute;
+  top: 50%;
+  left :50%;
+  transform: translate(-50%, -50%);
+  
+  background-color: rgb(13, 12, 19);
+  height: 100%;
+  width: 100%;
+  max-height: 80vh;
+  max-width: 30vw;
+  border-radius: 10px;
+  text-align: center;
+  padding-top: 7vh;
+  color : white;
+  border: 2px solid white;
+  box-sizing: border-box;
+  /* opacity: 0.8; */
+  
+  }
 
-.card{
-    width: 800px;
-    min-height: 100%;
-    background: #fff;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    margin: 0 10px;
-}
-
-.card-thumb{
-    width: 70%;
-    height: 250px;
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    position: relative;
-}
-
-.client-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.client-name{
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    padding: 5px 20px;
-    background: #fff;
-    text-transform: capitalize;
-    font-size: 14px;
-}
-
-.card-body{
-    width: 120%;
-    min-height: 100%;
-    height: auto;
-    margin-left: 20px;
-    position: relative;
-    padding-bottom: 50px;
-}
-
-.review{
-    font-size: 20px;
-    line-height: 30px;
-    margin-top: 30px;
-}
-
-.rating{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.star{
-    width: 25px;
-    margin-right: 5px;
-}
-
-.indicators{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.indicators button{
-    background: none;
-    border: none;
-    outline: none;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 2px solid #fff;
+  .button1{
+    background-color: #000;
+    border: 0.4vw solid rgb(230, 216, 219);
+    border-radius: 2vw;
+    color: #fff;
+    padding: 1vw;
     cursor: pointer;
-    margin-left: 5px;
-    transition: .5s;
+    font-size: 1vw;
+    box-shadow: 0 0 10px 0 rgb(161, 159, 159),
+                0 0 10px 0 rgb(217, 192, 197),
+                0 0 10px 0 rgb(230, 202, 208) inset;
+    position: absolute;
+    top: 70vh;
+    right: 1vw;       
+  }
+.testimonial-slider {
+   display: block;
+   width: 100%;
+   height: auto;
+   margin-top: 100px;
 }
 
-button.active{
-    width: 40px;
-    border-radius: 50px;
-    background: #fff;
+.testimonial-slider ul.slider {
+   display: block;
+   list-style: none;
+   padding: 0;
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 350px;
+   overflow: hidden;
+   margin: 0 auto;
 }
 
-@media (max-width: 800px){
-    .container{
-        width: 50%;
-        margin: auto;
+.testimonial-slider ul.slider li {
+    position: absolute;
+    display: block;
+    width: 100%;
+    opacity: 0;
+    margin: 0 auto;
+}
+.testimonial-slider ul.slider li:nth-child(1) {
+    opacity: 1;
+
+    -webkit-animation: fade-animation-1 25s infinite;
+            animation: fade-animation-1 25s infinite;
+}
+.testimonial-slider ul.slider li:nth-child(2) {
+    -webkit-animation: fade-animation-2 25s infinite;
+            animation: fade-animation-2 25s infinite;
+}
+.testimonial-slider ul.slider li:nth-child(3) {
+    -webkit-animation: fade-animation-3 25s infinite;
+            animation: fade-animation-3 25s infinite;
+}
+.testimonial-slider ul.slider li:nth-child(4) {
+    -webkit-animation: fade-animation-4 25s infinite;
+            animation: fade-animation-4 25s infinite;
+}
+
+.testimonial-slider q {
+   display: inline-block;
+   font: normal 700 3.2vw / 1.25 "Raleway", Helvetica, Arial, Verdana, sans-serif;
+   letter-spacing: .5pt;
+   text-shadow: 0 5px 10px rgba(0,0,0,.1);
+   max-width: 30ch;
+   
+   
+
+}
+
+.testimonial-slider .source {
+    margin-top: 25px;
+    color: #d9e0f9;
+    font: italic 400 30px / 1.35 "Raleway", Helvetica, Arial, Verdana, sans-serif;
+}
+
+/* KEYFRAME DECLARATIONS */
+@keyframes fade-animation-1 {
+    0%, 25%, 100% {
+        opacity:0
     }
-    .card{
-        flex-direction: column;
+    3%, 22% {
+        opacity: 1;
     }
-    .card-thumb{
-        width: 100%;
-        border-radius: 10px;
+}
+@keyframes fade-animation-2 {
+    0%, 25%, 50%, 100% {
+        opacity:0
     }
-    .card-body{
-        width: 100%;
-        min-height: auto;
-        margin-left: 0;
+    28%, 47% {
+        opacity: 1;
+    }
+}
+@keyframes fade-animation-3 {
+    0%, 50%, 75%, 100% {
+        opacity:0
+    }
+    53%, 72% {
+        opacity: 1;
+    }
+}
+@keyframes fade-animation-4 {
+    0%, 75%, 100% {
+        opacity:0
+    }
+    78%, 97% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-animation-1 {
+    0%, 25%, 100% {
+        opacity:0
+    }
+    3%, 22% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade-animation-2 {
+    0%, 25%, 50%, 100% {
+        opacity:0
+    }
+    28%, 47% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade-animation-3 {
+    0%, 50%, 75%, 100% {
+        opacity:0
+    }
+    53%, 72% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fade-animation-4 {
+    0%, 75%, 100% {
+        opacity:0
+    }
+    78%, 97% {
+        opacity: 1;
     }
 }
