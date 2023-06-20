@@ -79,10 +79,11 @@ img{
                   0 0 1vw0 rgb(217, 192, 197),
                   0 0 1vw 0 rgb(230, 202, 208) inset;
       position: absolute;
-      top: 25vh;
-      right: 8vw;         
+      top: 60vh;
+      right: 13vw;         
     }
-    .button3{
+      /* 這裡寫出popup button的造型和位置 */
+    .popup button{
       background-color: #000009;
       border: 0.3vw solid rgb(230, 216, 219);
       border-radius: 2vw;
@@ -95,28 +96,30 @@ img{
                   0 0 1vw 0 rgb(230, 202, 208) inset;
       position: absolute;
       top: 70%;
-      left:42%
+      left:42%;
     }
 
+     /* popup這方塊的造型和彈出動畫製作 */
     .popup{
       width:30vw;
       height: 30vh;
       background-color: #ffffff;
       border-radius: 6px;
       position: absolute;
-      top:50%;
+      top:0;
       left: 50%;
       transform: translate(-50%,-50%)scale(0.1);/* 讓他有彈出動畫的感覺 */
       text-align: center;
       padding: 0 2vw 2vw;
       color: #333;
       opacity: 1.5;
-      visibility: hidden; 
+      visibility: hidden; /*原本是隱藏的
       /* 這裡原本預設為會是隱藏當點擊提交才會跳出來 */
-      
+      transition: transform 0.4s, top 0.4s;/* 跑出並製作出動畫然後有設定秒數 */
     }
+
     .open-popup{
-      visibility: visible;
+      visibility: visible; /*這裡會顯示出來popup的畫面*/
       top:50%;
       transform: translate(-50%,-50%) scale(1);
     }
